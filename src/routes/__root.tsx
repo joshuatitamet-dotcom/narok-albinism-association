@@ -82,11 +82,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Albinism Forum — Dignity, Visibility, Opportunity" },
       { name: "description", content: "A community organization advocating for the rights, health, and empowerment of people living with albinism." },
       { name: "author", content: "Albinism Forum" },
-      { property: "og:title", content: "Albinism Forum" },
-      { property: "og:description", content: "Championing dignity, visibility and opportunity for people living with albinism." },
+      { property: "og:title", content: "Albinism Forum — Dignity, Visibility, Opportunity" },
+      { property: "og:description", content: "A community organization advocating for the rights, health, and empowerment of people living with albinism." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Albinism Forum — Dignity, Visibility, Opportunity" },
+      { name: "twitter:description", content: "A community organization advocating for the rights, health, and empowerment of people living with albinism." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9d42c08f-a151-4dca-8924-efff49f748e7" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9d42c08f-a151-4dca-8924-efff49f748e7" },
     ],
     links: [
       {
