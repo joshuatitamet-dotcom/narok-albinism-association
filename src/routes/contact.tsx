@@ -50,9 +50,9 @@ function ContactPage() {
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1fr_1.4fr]">
         <div className="space-y-6">
           {[
-            { Icon: Mail, label: "Email", value: "hello@albinismforum.org" },
-            { Icon: Phone, label: "Phone", value: "+254 700 000 000" },
-            { Icon: MapPin, label: "Office", value: "Nairobi, Kenya" },
+            { Icon: Mail, label: "Email", value: "reubenmpatiany@gmail.com" },
+            { Icon: Phone, label: "Phone", value: "254 728855087" },
+            { Icon: MapPin, label: "Office", value: "Narok, Kenya" },
             { Icon: Clock, label: "Business Hours", value: "Open 24 / 7 — our support line never closes." },
           ].map(({ Icon, label, value }) => (
             <div key={label} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-card)]">
@@ -64,7 +64,7 @@ function ContactPage() {
             </div>
           ))}
           <a
-            href="https://wa.me/254700000000"
+            href="https://wa.me/254728855087"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 rounded-2xl border border-border bg-primary/10 p-5 shadow-[var(--shadow-card)] transition-transform hover:scale-[1.01]"

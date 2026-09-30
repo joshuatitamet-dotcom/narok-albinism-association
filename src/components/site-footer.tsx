@@ -29,9 +29,9 @@ export function SiteFooter() {
             Get in Touch
           </h4>
           <p className="mt-3 text-sm text-muted-foreground">
-            hello@albinismforum.org<br />
-            +254 700 000 000<br />
-            Nairobi, Kenya
+            reubenmpatiany@gmail.com<br />
+            254 728855087<br />
+            Narok, Kenya
           </p>
         </div>
       </div>
