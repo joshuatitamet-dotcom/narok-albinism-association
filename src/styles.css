@@ -141,12 +141,32 @@
 }
 
 @layer base {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   * {
     border-color: var(--color-border);
+    box-sizing: border-box;
   }
 
   body {
+    min-width: 0;
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  img,
+  video {
+    height: auto;
   }
 }
