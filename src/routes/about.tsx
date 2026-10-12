@@ -133,7 +133,7 @@ function AboutPage() {
                 key={m.name}
                 className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)]"
               >
-                <div className="flex h-40 items-center justify-center overflow-hidden rounded-2xl">
+                <div className="mx-auto flex h-40 w-40 items-center justify-center overflow-hidden rounded-full">
                   <img
                     src={teamImg}
                     alt={m.name}
