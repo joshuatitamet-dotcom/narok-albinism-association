@@ -1,7 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import teamImg from "@/assets/team-albinism.jpg";
 import { Award, BadgeCheck, ShieldCheck, Star } from "lucide-react";
+
+const teamMembers = [
+  {
+    name: "Amani Otieno",
+    role: "Executive Director",
+    bio: "Co-founder, advocate, and parent of a teen with albinism.",
+    photo: "/team/amani-otieno.jpg",
+  },
+  {
+    name: "Dr. Faith Wanjiru",
+    role: "Medical Lead",
+    bio: "Dermatologist running our quarterly skin camps.",
+    photo: "/team/faith-wanjiru.jpg",
+  },
+  {
+    name: "Brian Mwangi",
+    role: "Programs Manager",
+    bio: "Designs our education and livelihood programs.",
+    photo: "/team/brian-mwangi.jpg",
+  },
+];
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -112,41 +141,55 @@ function AboutPage() {
             Led by the community.
           </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                name: "Amani Otieno",
-                role: "Executive Director",
-                bio: "Co-founder, advocate, and parent of a teen with albinism.",
-              },
-              {
-                name: "Dr. Faith Wanjiru",
-                role: "Medical Lead",
-                bio: "Dermatologist running our quarterly skin camps.",
-              },
-              {
-                name: "Brian Mwangi",
-                role: "Programs Manager",
-                bio: "Designs our education and livelihood programs.",
-              },
-            ].map((m) => (
-              <article
-                key={m.name}
-                className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)]"
-              >
-                <div className="mx-auto flex h-40 w-40 items-center justify-center overflow-hidden rounded-full">
-                  <img
-                    src={teamImg}
-                    alt={m.name}
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <h3 className="mt-5 font-serif text-xl font-semibold text-foreground">{m.name}</h3>
-                <p className="text-sm font-medium text-primary">{m.role}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{m.bio}</p>
-              </article>
+            {teamMembers.map((m) => (
+              <Dialog key={m.name}>
+                <article className="rounded-2xl border border-border bg-card p-6 text-center shadow-[var(--shadow-card)]">
+                  <DialogTrigger asChild>
+                    <button className="group mx-auto block w-full cursor-pointer text-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-4 focus:ring-offset-background">
+                      <span className="mx-auto flex h-40 w-40 items-center justify-center overflow-hidden rounded-full border border-border">
+                        <img
+                          src={m.photo}
+                          alt={m.name}
+                          width={1024}
+                          height={1024}
+                          loading="lazy"
+                          onError={(event) => {
+                            event.currentTarget.src = teamImg;
+                          }}
+                          className="h-full w-full object-cover transition duration-300 group-hover:scale-110 group-hover:brightness-90"
+                        />
+                      </span>
+                      <h3 className="mt-5 font-serif text-xl font-semibold text-foreground">
+                        {m.role} = {m.name}
+                      </h3>
+                    </button>
+                  </DialogTrigger>
+                </article>
+                <DialogContent className="max-w-xl">
+                  <DialogHeader>
+                    <div className="mx-auto mb-4 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border border-border sm:mx-0">
+                      <img
+                        src={m.photo}
+                        alt={m.name}
+                        width={1024}
+                        height={1024}
+                        loading="lazy"
+                        onError={(event) => {
+                          event.currentTarget.src = teamImg;
+                        }}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <DialogTitle className="font-serif text-2xl text-foreground">
+                      {m.name}
+                    </DialogTitle>
+                    <DialogDescription className="text-base font-medium text-primary">
+                      {m.role}
+                    </DialogDescription>
+                  </DialogHeader>
+                  <p className="text-sm leading-6 text-muted-foreground">{m.bio}</p>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
