@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 export function SiteFooter() {
   return (
     <footer className="mt-16 border-t border-border bg-secondary/40 sm:mt-24">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-14 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-14 tablet:grid-cols-2 laptop:grid-cols-3">
         <div>
           <h3 className="font-serif text-xl font-semibold text-foreground">Albinism Forum</h3>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">

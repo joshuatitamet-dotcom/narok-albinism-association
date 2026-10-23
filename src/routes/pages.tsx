@@ -51,7 +51,7 @@ function PagesIndex() {
         title="Everything else, in one place."
         subtitle="A directory of resources, events and quick links across the Albinism Forum site."
       />
-      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-2 lg:grid-cols-3">
+      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-14 sm:px-6 sm:py-20 tablet:grid-cols-2 laptop:grid-cols-3">
         {cards.map(({ icon: Icon, title, desc }) => (
           <Link
             key={title}

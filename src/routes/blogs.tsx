@@ -113,7 +113,7 @@ function BlogsPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-10 sm:px-6 sm:py-12 md:grid-cols-2">
+      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-10 sm:px-6 sm:py-12 tablet:grid-cols-2">
         {filtered.map((p) => (
           <article
             key={p.title}
@@ -143,7 +143,7 @@ function BlogsPage() {
 
       {/* Lead Magnets */}
       <section className="border-y border-border bg-[var(--gradient-warm)]">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-14 sm:px-6 sm:py-20 tablet:grid-cols-2">
           <div className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] sm:p-8">
             <Sparkles className="h-6 w-6 text-primary" />
             <h3 className="mt-4 font-serif text-xl font-semibold text-foreground sm:text-2xl">

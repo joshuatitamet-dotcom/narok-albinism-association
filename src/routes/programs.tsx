@@ -69,7 +69,7 @@ function ProgramsPage() {
         title="Practical programs. Measurable change."
         subtitle="Each program is co-designed with people with albinism and measured by real-world outcomes — skin protected, children in school, jobs created."
       />
-      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-2 lg:grid-cols-3">
+      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-14 sm:px-6 sm:py-20 tablet:grid-cols-2 laptop:grid-cols-3">
         {programs.map(({ icon: Icon, name, desc }) => (
           <article
             key={name}
@@ -93,7 +93,7 @@ function ProgramsPage() {
           <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
             What you'll learn in our flagship program.
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 tablet:grid-cols-2">
             {[
               {
                 week: "Week 1",
@@ -162,7 +162,7 @@ function ProgramsPage() {
         <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
           Choose how you want to take part.
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 tablet:grid-cols-2 laptop:grid-cols-3">
           {[
             {
               name: "Community",
@@ -231,7 +231,7 @@ function ProgramsPage() {
           <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
             Voices from the program.
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 tablet:grid-cols-2 laptop:grid-cols-3">
             {[
               {
                 quote:

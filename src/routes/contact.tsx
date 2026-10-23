@@ -53,7 +53,7 @@ function ContactPage() {
         title="Let's talk."
         subtitle="Partnerships, volunteering, media, or simply a question — we read every message."
       />
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-[1fr_1.4fr] md:gap-12">
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-20 laptop:grid-cols-[1fr_1.4fr] laptop:gap-12">
         <div className="space-y-6">
           {[
             { Icon: Mail, label: "Email", value: "reubenmpatiany@gmail.com" },
@@ -155,7 +155,7 @@ function ContactPage() {
           <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
             Before you write — you might find the answer here.
           </h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-5 tablet:grid-cols-2">
             {[
               {
                 q: "How do I enroll my child in the scholarship program?",

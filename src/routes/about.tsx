@@ -60,7 +60,7 @@ function AboutPage() {
       />
 
       {/* Brand Story */}
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-2 md:gap-12">
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 tablet:grid-cols-2 tablet:gap-12">
         <div>
           <p className="text-sm font-semibold uppercase tracking-wider text-primary">Our Story</p>
           <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
@@ -103,7 +103,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-20 md:grid-cols-2 md:gap-12">
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-20 tablet:grid-cols-2 tablet:gap-12">
         <div>
           <h2 className="font-serif text-3xl font-semibold text-foreground">Our Mission</h2>
           <p className="mt-4 text-muted-foreground">
@@ -140,7 +140,7 @@ function AboutPage() {
           <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
             Led by the community.
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 tablet:grid-cols-2 laptop:grid-cols-3">
             {teamMembers.map((m) => (
               <Dialog key={m.name}>
                 <article className="rounded-2xl border border-border bg-card p-6 text-center shadow-[var(--shadow-card)]">
@@ -201,7 +201,7 @@ function AboutPage() {
         <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
           Milestones & certifications.
         </h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 tablet:grid-cols-2 laptop:grid-cols-4">
           {[
             {
               Icon: ShieldCheck,

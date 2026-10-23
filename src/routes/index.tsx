@@ -78,7 +78,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 tablet:grid-cols-2 laptop:grid-cols-3">
           {[
             {
               icon: ShieldCheck,
@@ -127,7 +127,7 @@ function Index() {
 
       {/* STATS BAND */}
       <section className="bg-secondary/40 py-12 sm:py-16">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 sm:px-6 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 sm:px-6 laptop:grid-cols-4">
           {[
             { k: "12k+", v: "People supported" },
             { k: "38", v: "Schools partnered" },

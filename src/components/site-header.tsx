@@ -26,7 +26,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-1 laptop:flex">
           {navLinks.map((l) => (
             <Link
               key={l.to}
@@ -42,7 +42,7 @@ export function SiteHeader() {
 
         <Link
           to="/contact"
-          className="hidden shrink-0 rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.03] lg:inline-flex"
+          className="hidden shrink-0 rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.03] laptop:inline-flex"
         >
           Get Involved
         </Link>
@@ -50,14 +50,14 @@ export function SiteHeader() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="shrink-0 rounded-md p-2 text-foreground lg:hidden"
+          className="shrink-0 rounded-md p-2 text-foreground laptop:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-border bg-background px-4 py-4 sm:px-6 lg:hidden">
+        <nav className="flex flex-col gap-1 border-t border-border bg-background px-4 py-4 sm:px-6 laptop:hidden">
           {navLinks.map((l) => (
             <Link
               key={l.to}
